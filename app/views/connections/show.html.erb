@@ -1,0 +1,18 @@
+<p>
+  <strong>Requester:</strong>
+  <%= @connection.requester.email %>
+</p>
+
+<p>
+  <strong>Requestee:</strong>
+  <%= @connection.requestee.email %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @connection.status %>
+</p>
+
+<% if @connection.status == 'pending' %>
+  <%= button_to 'Accept', accept_connection_path(@connection), method: :patch %>
+<% end %>

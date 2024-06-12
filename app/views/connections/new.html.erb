@@ -1,0 +1,11 @@
+<%= form_with(model: @connection, url: connections_path, local: true) do |form| %>
+    <div class="field">
+      <%= form.label :requestee_id %>
+      <%= form.number_field :requestee_id %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit "Send Request" %>
+    </div>
+  <% end %>
+  

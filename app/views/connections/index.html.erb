@@ -1,0 +1,12 @@
+<% @connections.each do |connection| %>
+    <div>
+      <p>
+        Requester: <%= connection.requester.email %> <br>
+        Status: <%= connection.status %>
+      </p>
+      <%= button_to 'Accept', accept_connection_path(connection), method: :patch %>
+      <%= button_to 'Cancel', cancel_connection_path(connection), method: :patch %>
+    </div>
+    <hr>
+  <% end %>
+  
